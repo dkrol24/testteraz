@@ -13,6 +13,7 @@
     "@next/font": "13.0.7",
     "@portabletext/react": "^2.0.0",
     "@reduxjs/toolkit": "^1.9.1",
+    "@sanity/cli": "^3.0.6",
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.46.0",
     "@types/node": "18.11.15",
