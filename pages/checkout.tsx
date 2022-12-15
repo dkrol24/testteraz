@@ -3,7 +3,6 @@ import Header from "../components/Header";
 
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Currency from "react-currency-formatter";
 import { useSelector } from "react-redux";
 import Stripe from "stripe";
 import Button from "../components/Button";
@@ -85,7 +84,7 @@ function Checkout  ()  {
                   <div className="flex justify-between">
                     <p>Subtotal</p>
                     <p>
-                      <Currency quantity={basketTotal} currency="USD" />
+                    {basketTotal}
                     </p>
                   </div>
                   <div className="flex justify-between">
@@ -107,7 +106,7 @@ function Checkout  ()  {
                 <div className="flex justify-between pt-4 text-xl font-semibold">
                   <h4>Total</h4>
                   <h4>
-                    <Currency quantity={basketTotal} currency="USD" />
+                  {basketTotal}
                   </h4>
                 </div>
               </div>
@@ -136,7 +135,7 @@ function Checkout  ()  {
                     <h4 className="mb-4 flex flex-col text-xl font-semibold">
                       Pay in full
                       <span>
-                        <Currency quantity={basketTotal} currency="USD" />
+                      {basketTotal}
                       </span>
                     </h4>
 

@@ -1,7 +1,7 @@
 
 import Image from "next/image"
 import {urlFor} from "../sanity"
-import Currency from "react-currency-formatter"
+
 import { removeFromBasket } from "../redux/basketSlice";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
@@ -36,7 +36,8 @@ const CheckoutProduct = ({id,items}:Props) => {
             </div>
             <div>
                 <h4>
-                    <Currency quantity={items.reduce((total,item)=>total+item.price,0)} currency="PLN"/>
+                    <p>{items.reduce((total,item)=>total+item.price,0)}</p>
+                 
                 </h4>
                 <button onClick={removeItemFromBasket}>Remove</button>
             </div>

@@ -4,7 +4,6 @@
   import Link from "next/link";
   import { useRouter } from "next/router";
   import { useEffect, useState } from "react";
-  import Currency from "react-currency-formatter";
   import { useMediaQuery } from "react-responsive";
   import Button from "../components/Button";
 
@@ -143,7 +142,7 @@ import { fetchLineItems } from "./utils/fetchLineItems";
                   </button>
   
                   <p className="text-xl font-medium text-black">
-                    <Currency quantity={subtotal + 20} />
+                  {subtotal + 20}
                   </p>
                 </div>
               </div>
@@ -171,10 +170,11 @@ import { fetchLineItems } from "./utils/fetchLineItems";
                         </div>
                         <p className="flex-1">{product.description}</p>
                         <p>
-                          <Currency
-                            quantity={product.price.unit_amount / 100}
-                            currency={product.currency}
-                          />
+                          <p>
+                            produkt price unit amount - {product.price.unit_amount / 100}
+                            currency = 
+                          {product.currency}
+                            </p>
                         </p>
                       </div>
                     ))}
@@ -183,7 +183,7 @@ import { fetchLineItems } from "./utils/fetchLineItems";
                     <div className="flex justify-between text-sm">
                       <p className="text-[gray]">Subtotal</p>
                       <p className="font-medium">
-                        <Currency quantity={subtotal} />
+                      {subtotal}
                       </p>
                     </div>
                     <div className="flex justify-between text-sm">
@@ -193,7 +193,7 @@ import { fetchLineItems } from "./utils/fetchLineItems";
                     <div className="flex justify-between text-sm">
                       <p className="text-[gray]">Shipping</p>
                       <p className="font-medium">
-                        <Currency quantity={20} currency="PLN" />
+                        20
                       </p>
                     </div>
                   </div>
@@ -202,7 +202,7 @@ import { fetchLineItems } from "./utils/fetchLineItems";
                     <p className="flex items-center gap-x-2 text-xs text-[gray]">
                       PLN
                       <span className="text-xl font-medium text-black">
-                        <Currency quantity={subtotal + 20} />
+                      {subtotal + 20}
                       </span>
                     </p>
                   </div>
