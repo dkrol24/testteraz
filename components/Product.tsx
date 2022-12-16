@@ -17,6 +17,8 @@ function Product  ({product}: Props)  {
     toast.success(`${product.title} added to basket`,{
     position:"bottom-center"});
   }
+  {console.log(product)}
+
   return (
     <div style={{width:'301px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start',background:'green'}}>
       <div style={{display:'flex',justifyContent:'center'}}>
@@ -26,6 +28,8 @@ function Product  ({product}: Props)  {
         <div style={{display:'flex',flexDirection:'column',justifyContent:'center',width:'50%',padding:'0.5rem'}}>
           <p>{product.title}</p>
           <p>{product.price}</p>
+       
+        
         </div>
       <div style={{display:'flex',justifyContent:'center',width:'50%',cursor:'pointer'}} onClick={addItemToBasket}>
       <p>shopcart</p>
